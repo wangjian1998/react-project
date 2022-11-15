@@ -9,13 +9,6 @@ export const HomeWrapper = styled.div`
   .section-header {
     margin-top: 30px;
   }
-
-  .list-wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -8px;
-  }
 }
   
 `

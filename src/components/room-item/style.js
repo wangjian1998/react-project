@@ -43,6 +43,21 @@ const ItemWrapper = styled.div`
       margin: 10px 0 5px;
       font-weight: 700;
     }
+
+    .ratng {
+      .css-34he1w-MuiRating-decimal{
+        margin-right: -2px;
+      }
+
+      .reviews_count {
+        display: inline-block;
+        margin: 0 0 0 4px;
+      }
+
+      .extra {
+        font-weight: bold; 
+      }
+    }
   }
 `
 
