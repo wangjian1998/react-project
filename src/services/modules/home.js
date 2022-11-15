@@ -6,3 +6,9 @@ export function getHomeData() {
   })
 }
 
+export function getHomehighScoreData() {
+  return request.get({
+    url: '/home/highscore'
+  })
+}
+
