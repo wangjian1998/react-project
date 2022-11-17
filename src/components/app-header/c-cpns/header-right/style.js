@@ -51,6 +51,7 @@ export const RightWrapper = styled.div`
       box-shadow: 0 0 4px rgb(0 0 0 / 18%);
       border-radius: 10px;
       background-color: #fff;
+      z-index: 999;
       .item {
         padding: 15px 20px;
         &:hover {
