@@ -3,6 +3,7 @@ import styled from "styled-components";
 const ItemWrapper = styled.div`
   width: ${props=> props.itemWidth};
   padding: 8px;
+  flex-shrink: 0;
 
   .inner {
     width: 100%;
