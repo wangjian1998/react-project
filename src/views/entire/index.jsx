@@ -10,3 +10,4 @@ const Entire = memo(() => {
 })
 
 export default Entire
+ 
