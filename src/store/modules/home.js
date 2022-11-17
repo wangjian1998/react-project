@@ -1,4 +1,4 @@
-import { getHomeData, getHomehighScoreData, getDisCountData, getRecommendData } from '@/services'
+import { getHomeData, getHomehighScoreData, getDisCountData, getRecommendData, getLongForData } from '@/services'
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 
 
@@ -22,13 +22,20 @@ export const getRecommendDataAction = createAsyncThunk('FetchRecommend', async (
   return res
 })
 
+
+export const getLongForDataAction = createAsyncThunk('FetchLongFor', async () => {
+  const res = await getLongForData()
+  return res
+})
+
 const homeSlice = createSlice({
   name: "home",
   initialState: {
     goodPrice: {},
     highScoreData: {},
     discountData: {},
-    recommendData: {}
+    recommendData: {},
+    longForData: {}
   },
   reducers: {
     
@@ -44,8 +51,11 @@ const homeSlice = createSlice({
       state.discountData = payload
     },
     [getRecommendDataAction.fulfilled](state, {payload}) {
-      console.log(payload)
       state.recommendData = payload
+    },
+    [getLongForDataAction.fulfilled](state, {payload}) {
+      console.log(payload)
+      state.longForData = payload
     }
   }
 })
