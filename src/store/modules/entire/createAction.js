@@ -28,7 +28,6 @@ export const fetchRoomListAction = () => {
     dispatch(changeLoadingAction(true))
     const res = await getEntireData(currentPage*20)
     const roomList = res.list
-    console.log(roomList)
     const totalCount = res.totalCount
     dispatch(changeRoomListAction(roomList))
     dispatch(changeTotalCountAction(totalCount))

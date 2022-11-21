@@ -23,6 +23,69 @@ const ItemWrapper = styled.div`
       }
     }
 
+    .swiper {
+      position: relative;
+      cursor: pointer;
+      &:hover{
+        .control {
+          display: flex;
+        }
+      }
+      .control {
+        display: none;
+        color: #fff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        justify-content: space-between;
+
+        .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 83px;
+          height: 100%;
+          background: linear-gradient(to left, transparent 0%, rgba(0,0,0,0.25) 100%);
+          z-index: 999;
+          &.right {
+            background: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 100%);
+          }
+        }
+      }
+
+      .indicator {
+        width: 26%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 10px;
+        z-index: 9;
+      }
+
+      .dot-item {
+        width: 20%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .dot {
+          width: 6px;
+          height: 6px;
+          background-color: #fff;
+          border-radius: 50%;
+
+          &.active {
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+
+    }
+
     .desc {
       margin: 10px 0 5px;
       font-size: 12px;

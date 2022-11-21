@@ -63,7 +63,6 @@ const homeSlice = createSlice({
       state.longForData = payload
     },
     [getPlusDataAction.fulfilled](state, {payload}) {
-      console.log(payload)
       state.plusData = payload
     }
   }
