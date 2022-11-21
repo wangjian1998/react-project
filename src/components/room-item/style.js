@@ -48,7 +48,7 @@ const ItemWrapper = styled.div`
           width: 83px;
           height: 100%;
           background: linear-gradient(to left, transparent 0%, rgba(0,0,0,0.25) 100%);
-          z-index: 999;
+          z-index: 99;
           &.right {
             background: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 100%);
           }
