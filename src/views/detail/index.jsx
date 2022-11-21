@@ -1,12 +1,12 @@
 import React, { memo } from 'react'
-import { shallowEqual, useSelector } from 'react-redux'
+import { DetailWrapper } from './style'
+import DetailPicture from './detail-picture'
 
 const Detail = memo(() => {
-
-  const {detailData} = useSelector(state => ({detailData: state.detail.detailData}), shallowEqual)
-  console.log(detailData)
   return (
-    <div>Detail</div>
+    <DetailWrapper>
+      <DetailPicture></DetailPicture>
+    </DetailWrapper>
   )
 })
 
