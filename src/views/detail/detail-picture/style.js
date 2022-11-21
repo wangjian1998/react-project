@@ -27,6 +27,7 @@ export const PictureWrapper = styled.div`
         }
         img {
           width: 100%;
+          transition: transform 0.3s ease-in;
         };
 
         .cover {
