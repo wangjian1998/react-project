@@ -1,9 +1,15 @@
-import React, { memo } from 'react'
+import React, { memo, useState } from 'react'
 import { PictureWrapper } from './style'
 import { shallowEqual, useSelector } from 'react-redux'
+import PicBrowser from '@/base-ui/picture-browser'
 
 const DetailPicture = memo(() => {
   const {detailData} = useSelector(state => ({detailData: state.detail.detailData}), shallowEqual)
+  const [showPic, setShowPic] = useState(false)
+
+  function showPicture(bool) {
+    setShowPic(bool)
+  }
   return (
     <PictureWrapper>
      {detailData && (<div className="pictures">
@@ -25,7 +31,10 @@ const DetailPicture = memo(() => {
             })
           }
         </div>
+        <div className="show-btn" onClick={e => showPicture(true)}>显示图片</div>
       </div>)}
+      
+      {showPic && <PicBrowser pictures={detailData.picture_urls}  showClick={showPicture} />}
     </PictureWrapper>
   )
 })

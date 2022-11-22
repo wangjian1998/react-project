@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const PictureWrapper = styled.div`
+  position: relative;
   .pictures {
     display: flex;
     justify-content: center;
@@ -50,5 +51,16 @@ export const PictureWrapper = styled.div`
         border: 1px solid #000;
       }
     }
+  }
+
+  .show-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 6px 15px;
+    line-height: 22px;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
   }
 `
