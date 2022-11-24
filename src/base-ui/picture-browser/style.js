@@ -10,6 +10,7 @@ export const BrowserWrapper =  styled.div`
   bottom: 0;
   background-color: rgb(33,33,33);
   opacity: 1;
+  z-index: 99;
 
   .top {
     position: relative;
