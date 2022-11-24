@@ -7,6 +7,7 @@ import SectionHomeV2 from './c-cpns/section-home-v2'
 import SectionHomeV1 from './c-cpns/section-home-v1'
 import SectionLongFor from './c-cpns/section-longfor'
 import SectionPlus from './c-cpns/section-plus'
+import { headConfigAction } from '@/store/modules/main'
 
 
 const Home = memo(() => {
@@ -19,6 +20,7 @@ const Home = memo(() => {
     dispatch(getRecommendDataAction())
     dispatch(getLongForDataAction())
     dispatch(getPlusDataAction())
+    dispatch(headConfigAction({isFixed: true}))
   }, [dispatch])
 
   const {goodPrice, highScoreData, discountData, recommendData, longForData, plusData} = useSelector((state)=> ({
