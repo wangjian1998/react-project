@@ -21,7 +21,7 @@ const App = memo(() => {
       <div className='header'>
         <AppHeader/>
       </div>
-      <div className="content" style={{marginTop: headerConfig.isFixed ? '80px' : '0'}}>
+      <div className="content" >
         {useRoutes(routes)}
       </div>
       <div className="footer">

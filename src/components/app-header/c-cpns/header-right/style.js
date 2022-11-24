@@ -5,7 +5,7 @@ export const RightWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: ${prop => prop.theme.textColor.primary};
+  color: ${props => props.theme.isAlpha ? '#fff' : props.theme.textColor.primary};
 
   .btns {
     display: flex;
@@ -28,12 +28,6 @@ export const RightWrapper = styled.div`
     margin-left: 16px;
     border: 1px solid #DDDDDD;
     border-radius: 21px;
-
-    /* transition: box-shadow 200ms ease;
-
-    &:hover {
-      box-shadow: 0 2px 4px rgba(0,0,0,0.18);
-    } */
     ${prop => prop.theme.minix.boxShadow}
 
     span {

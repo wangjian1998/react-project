@@ -20,7 +20,7 @@ const Home = memo(() => {
     dispatch(getRecommendDataAction())
     dispatch(getLongForDataAction())
     dispatch(getPlusDataAction())
-    dispatch(headConfigAction({isFixed: true}))
+    dispatch(headConfigAction({isFixed: true, topAlpha: true}))
   }, [dispatch])
 
   const {goodPrice, highScoreData, discountData, recommendData, longForData, plusData} = useSelector((state)=> ({

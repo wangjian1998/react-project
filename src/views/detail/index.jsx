@@ -8,7 +8,7 @@ const Detail = memo(() => {
 
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(headConfigAction({isFixed: false}))
+    dispatch(headConfigAction({isFixed: false, topAlpha: false}))
   }, [dispatch])
   
   return (

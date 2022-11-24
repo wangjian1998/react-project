@@ -4,6 +4,7 @@ export const RoomWrapper = styled.div`
   position: relative;
   padding: 20px 16px;
   box-sizing: content-box;
+  margin-top: 100px;
 
   .list {
     display: flex;
