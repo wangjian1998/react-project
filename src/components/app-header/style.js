@@ -35,9 +35,10 @@ export const HeaderWrapper = styled.div`
       background-color: rgba(0,0,0,0.4);
       z-index: 9;
     }
-  /* position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 999; */
+
+    
+`
+export const SearchAreaWrapper = styled.div`
+  transition: height 300ms ease;
+  height: ${props=> props.isSearch ? '100px' : '0'}
 `
